@@ -29,7 +29,7 @@
 ## FAQ
  * Q: Why I am getting question marks [?] for citations and references are not shown anymore?  
 
- A: Please (1). Make sure you bibiography file (.bib) is in the folder and each items are formed correctly (pay attention to `,` and `}`. (2). Run in this sequence: `pdfLaTex` -->  `bibTex` --> `pdfLaTex`.  This may help.
+ A: Please (1). Make sure your bibiography file (.bib) is in the folder and each item is configured correctly (pay attention to `,` and `}`. (2). Run in this sequence: `pdfLaTex` -->  `bibTex` --> `pdfLaTex`.  It may help.
 
 ## Contact
 * Suo Tan - [tandysony@gmail.com](tandysony@gmail.com)
