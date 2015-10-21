@@ -1,0 +1,309 @@
+\everyjob{\typeout{Concordia University Thesis Style, Steve Malowany <10 Jan 1992>}}
+\everyjob{\typeout{\space\space\space\space\space\space\space\space\space\space
+        \space\space\space\space\space\space\space\space\space\space\space
+        \space\space\space\space\space revised by Stan Swiercz <28 Mar 1995>}}
+\everyjob{\typeout{\space\space\space\space\space\space\space\space\space\space
+        \space\space\space\space\space\space\space\space\space\space\space
+        \space\space\space revised by Patrice Chalin <12 Sep 1995>}}
+\everyjob{\typeout{\space\space\space\space\space\space\space\space\space\space
+        \space\space\space\space\space\space\space\space\space\space\space
+        \space\space\space\space\space revised by Stan Swiercz <24 Sep 1996>}}
+\immediate\write10{Concordia University Thesis Style, Steve Malowany <10 Jan 1992>}
+\immediate\write10{\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space revised by Stan Swiercz <28 Mar 1995>}
+\immediate\write10{\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space revised by Patrice Chalin <12 Sep 1995>}
+\immediate\write10{\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space revised by Stan Swiercz <24 Sep 1996>}
+\immediate\write10{\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space revised by Suo Tan <20 Oct 2015>}
+
+% ---------------------------------------------------------------------------------------------
+%       A LaTeX 2e Style Sheet for the Concordia University Thesis
+%           - Refined and updated to modern requirements
+%            
+%    by    Suo Tan (tandysony@gmail.com)                                                                 
+%            Design Lab, ENCS                                                                          				   
+%            Concordia University                                                                       				    
+%            Montreal, QC, CA                                                                           				     
+%            Oct. 20, 2015 
+% ---------------------------------------------------------------------------------------------
+
+% require report
+\@ifundefined{chapter}{\@latexerr{Please use 'report' document style}}{}
+
+\makeatletter
+\oddsidemargin 0.5in 
+\evensidemargin 0.5in
+\marginparwidth 40pt 
+\marginparsep 10pt
+\topmargin 0in 
+\headsep 0in %-0.1 topmargin
+\textheight 8.75in 
+\textwidth 6in %9in textheight
+
+\brokenpenalty=10000
+
+\usepackage{times}
+% for continous numbering of figures & tables across chapters use the following:
+%\def\cl@chapter{\@elt{section}\@elt{footnote}}
+%\def\thefigure{\@arabic\c@figure}
+%\def\thetable{\@arabic\c@table}
+
+% for figures  & tables numbered in the conventional report style (chapter.number)
+% comment the above 3 lines and uncomment the following line:
+\def\cl@chapter{\@elt{section}\@elt{footnote}\@elt{figure}\@elt{table}}
+
+\def\theequation{\arabic{equation}}
+
+\def\chairOfCommittee#1{\gdef\@chairOfCommittee{#1}}
+\def\examinerFirstOfCommittee#1{\gdef\@examinerFirstOfCommittee{#1}}
+\def\examinerSecondOfCommittee#1{\gdef\@examinerSecondOfCommittee{#1}}
+\def\examinerExternalOfCommittee#1{\gdef\@examinerExternalOfCommittee{#1}}
+\def\deanOfENCS#1{\gdef\@deanOfENCS{#1}}
+\def\chairOfDept#1{\gdef\@chairOfDept{#1}}
+\def\program#1{\gdef\@program{#1}}
+\def\program#1{\gdef\@program{#1}}
+\def\mastersDegree#1{\gdef\@mastersDegree{#1}}
+\def\dept#1{\gdef\@dept{#1}}
+\def\myCoSupervisor#1{\gdef\@myCoSupervisor{#1}}
+\def\advis@r{Adviser}
+\def\principaladvisor#1{\gdef\@principaladvisor{#1}\gdef\advis@r{Advisor}}
+\def\submitdate#1{\gdef\@submitdate{#1}}
+\def\copyrightyear#1{\gdef\@copyrightyear{#1}} % \author, \title in report
+%
+% If your name contains accents then you must use for example
+%   \a'{a} instead of \'{a}
+%
+\def\@title{A \LaTeX{} Thesis Template for ENCS Graduate Student from Concordia University}
+\def\@author{Suo Tan}
+\def\@mastersDegree{Master of Applied Science}
+\def\@program{}\def\@dept{Mechanical and Industrial Engineering}
+\def\@principaladviser{Yong Zeng}
+\def\@deanOfENCS{Amir Asif}
+\def\@chairOfDept{Martin D. Pugh}
+\def\@chairOfCommittee{}
+\def\@examinerFirstOfCommittee{}
+\def\@examinerSecondOfCommittee{}
+\def\@examinerExternalOfCommittee{}
+\def\@submitdate{\ifcase\the\month\or
+  January\or February\or March\or April\or May\or June\or
+  July\or August\or September\or October\or November\or December\fi
+  \space \number\the\year}
+\ifnum\month=12
+    \@tempcnta=\year \advance\@tempcnta by 1
+    \edef\@copyrightyear{\number\the\@tempcnta}
+\else
+    \def\@copyrightyear{\number\the\year}
+\fi
+\newif\ifcopyright \newif\iffigurespage \newif\iftablespage
+\copyrighttrue \figurespagetrue \tablespagetrue
+
+% \titeOfPhDAuthor is to be set to Mr. or Mrs., etc.
+\def\titleOfPhDAuthor#1{\gdef\@titleOfPhDAuthor{#1}}
+\newif\ifphd % if not PhD then Masters
+\def\PhDDegree{Doctor of Philosophy}
+\def\PhD{\phdtrue}
+\let\phd\PhD
+\def\Masters{\phdfalse}
+\let\masters\Masters
+\let\Master\Masters
+\let\master\Masters
+\Masters % by default
+\newif\ifcosupervisor
+\let\cosupervisor\cosupervisortrue
+\cosupervisorfalse
+
+\def\titlep{%
+        \thispagestyle{empty}%
+        \null\vskip.4in%
+
+        \begin{center}
+        \begin{singlespace}
+%                {\Large\uppercase\expandafter{\@title}}
+               %% NO uppercase on the cover page according to the exmaple 
+               %% provided by Concordia university. Suo Tan, Oct 20, 2015
+                \LARGE\bf\expandafter{\@title} 
+         \end{singlespace}
+        \end{center}
+        \vskip.5in
+        \begin{center}
+                 \bf \@author
+        \end{center}
+        \vskip.5in
+        \begin{center}
+            \bf A Thesis\\
+            in\\
+            The Department\\
+            of\\
+            \expandafter{\@dept}\\
+        \end{center}
+        \vskip.5in
+        \begin{center}
+                \bf Presented in Partial Fulfillment of the Requirements\\
+                for the Degree of\\
+                 \ifphd\PhDDegree~(\@program)\else \@mastersDegree~(\@program)\fi \ at \\
+                Concordia University\\
+                Montr\'{e}al, Qu\'{e}bec, Canada
+        \end{center}
+        \vskip.6in
+        \begin{center}
+                \bf  \@submitdate\\
+                \vskip.4in
+                \copyright \ {\@author}, \@copyrightyear
+        \end{center}\vskip.5in\newpage}
+
+          
+\long\def\phdsignature#1{%
+\begin{center}
+\begin{minipage}{4in}
+\parindent=0pt
+\begin{singlespace}
+I certify that I have read this thesis and that in my opinion
+it is fully adequate, in scope and in quality, as a dissertation for the degree
+of Doctor of Philosophy.
+\par
+\vspace{.5in}
+\hbox to 4in{\hfil\shortstack{\vrule width 3in height 0.4pt\\#1}}
+\end{singlespace}
+\end{minipage}
+\end{center}}
+
+\def\signaturepage{%
+    \begin{center}
+        {\Large \sc Concordia University}\\
+        {\large School of Graduate Studies}
+    \end{center}
+    \vspace{.2in}
+    This is to certify that the thesis prepared 
+    \begin{tabbing}
+        \hspace*{1.2in} \= \kill
+        By:           \> \bf \ifphd\@titleOfPhDAuthor~\fi\@author \\ 
+        Entitled:     \> \parbox[t]{4.6in}{ \bf \@title \strut}
+    \end{tabbing}
+    and submitted in partial fulfillment of the requirements for the degree of
+    \begin{center}
+        \bf \ifphd\PhDDegree~(\@program)\else \@mastersDegree ~(\@program)\fi
+    \end{center}
+    complies with the regulations of this University and meets the
+    accepted standards with respect to originality and quality.
+    \ \\
+    Signed by the Final Examining Committee:\\
+    \begin{singlespace}
+    \noindent \hspace*{3cm} \hrulefill \makebox[4cm][l]{ Chair} \\
+    \hspace*{3cm} \raisebox{.1cm}{\makebox[4cm][l]{\it Dr. \@chairOfCommittee}} \\
+    \newline 
+    \hspace*{3cm} \hrulefill \makebox[4cm][l]{ External Examiner} \\
+    \hspace*{3cm} \raisebox{.1cm}{\makebox[4cm][l]{\it Dr. \@examinerExternalOfCommittee}} \\
+    \newline 
+    \hspace*{3cm} \hrulefill \makebox[4cm][l]{ Examiner} \\
+    \hspace*{3cm} \raisebox{.1cm}{\makebox[4cm][l]{\it Dr. \@examinerFirstOfCommittee}} \\
+    \ifphd%
+    \newline 
+    \hspace*{3cm} \hrulefill \makebox[4cm][l]{ Examiner} \\
+    \hspace*{3cm} \raisebox{.1cm}{\makebox[4cm][l]{\it Dr. \@examinerSecondOfCommittee}} \\
+    \fi%
+    \newline 
+    \hspace*{3cm} \hrulefill \makebox[4cm][l]{ Supervisor}\\
+    \hspace*{3cm} \raisebox{.1cm}{\makebox[4cm][l]{\it Dr. \@principaladvisor}} \\
+    \ifcosupervisor%
+    \newline 
+    \hspace*{3cm} \hrulefill \makebox[4cm][l]{ Co-supervisor}\\
+    \hspace*{3cm} \raisebox{.1cm}{\makebox[4cm][l]{\it Dr. \@myCoSupervisor}} \\
+    \fi%
+    \ \\
+    \newline
+    Approved by \hspace*{.7cm} \makebox[4.5in]{\hrulefill} \\
+    \hspace*{3cm} \raisebox{.1cm}{\parbox[t]{4in}{\@chairOfDept, Chair \\ Department of \@dept}} \\ 
+    \vspace{.2in}
+    \begin{tabbing}
+   	\hspace*{6.5cm} \= \kill
+   	\makebox[1.2in]{\hrulefill } \the\year  \>  \makebox[3.13in][l]{\hrulefill} \\
+   	     \> \raisebox{.1cm}{\parbox[t]{4in}{\@deanOfENCS, Dean \\
+   		Faculty of Engineering and Computer Science}}
+    \end{tabbing}
+  \end{singlespace}
+}
+
+\def\beforepreface{
+        \pagenumbering{roman}
+        \pagestyle{plain}
+        \thispagestyle{empty}
+        \titlep
+        \thispagestyle{empty}
+        \signaturepage}
+
+\def\mastersabstract{%
+        \thispagestyle{empty}
+        \newpage
+        \null\vskip.25in%
+        \begin{center}
+                {\LARGE\bf{Abstract}}
+        \end{center}
+             \vskip.25in
+        \begin{center}
+% The following line added extra vertical spacing in titles with more
+% than 2 lines. Changed September 24, 1996.
+%              {\large\expandafter{\@title}}
+        \begin{singlespace}
+                \large\expandafter{\@title}
+        \end{singlespace}
+        \end{center}
+        \begin{center}  
+                \@author\\ \null
+        \end{center}
+         \ \indent
+%       \addcontentsline{toc}{chapter}{Abstract}
+}
+
+\def\phdabstract{%
+        \newpage
+        \null\vskip.25in%
+        \begin{center}
+                {\LARGE\bf{Abstract}}
+        \end{center}
+     \vskip.25in
+        \begin{center}
+           \begin{singlespace}
+                {\expandafter{\bf \@title}}
+           \end{singlespace}
+        \end{center}
+       \textbf{\@author, Ph.D. \\ Concordia University, \@copyrightyear\\} \null \\ \indent
+%       \addcontentsline{toc}{chapter}{Abstract}           % no longer acceptable
+}
+
+\def\prefacesection#1{%
+        \chapter*{#1}
+%       \addcontentsline{toc}{chapter}{#1}
+}
+
+\def\afterpreface{\newpage
+        \tableofcontents
+        \newpage
+        \iffigurespage
+        \addcontentsline{toc}{chapter}{List of Figures} % list of figures
+                {\addvspace{10pt}
+                \let\saveaddvspace=\addvspace
+                \def\addvspace##1{}
+                \listoffigures
+                \let\addvspace=\saveaddvspace}
+                \newpage
+        \fi
+        \iftablespage
+        \addcontentsline{toc}{chapter}{List of Tables}   % list of tables
+                {\addvspace{10pt}
+                \let\saveaddvspace=\addvspace
+                \def\addvspace##1{}
+                \listoftables
+                \let\addvspace=\saveaddvspace}
+                \newpage
+        \fi
+        \pagenumbering{arabic}
+%       \pagestyle{headings}}     % no longer acceptable
+}
+
+\renewenvironment{abstract}
+       {\beforepreface
+        \ifphd\phdabstract\else\mastersabstract\fi}
+       {}
+\newenvironment{acknowledgments}
+       {\prefacesection{Acknowledgments}}
+       {\afterpreface}
+
+\makeatother
