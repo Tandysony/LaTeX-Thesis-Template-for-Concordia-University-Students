@@ -1,4 +1,4 @@
-# A LaTex thesis template and style for ENCS graduate student from Concordia University
+# A LaTeX thesis template and style for ENCS graduate student from Concordia University
 ----------------------------------------------
 * Version: v2.0
 * Last updated:	Oct. 20, 2015
@@ -6,13 +6,18 @@
 * Design Lab, ENCS
 * Cocordia University
 * Montreal, QC, CA
-----------------------------------------------
 
 ## Introduction
  This thesis template has been created to make it easy to prepare your thesis using LaTeX while adhering to the [Concordia University Thesis Specifications posted online](https://www.concordia.ca/artsci/english/programs/graduate/english-ma/thesis-deadlines-formatting.html#format). The official thesis examples are provided here as a PDF file: http://www.concordia.ca/content/dam/concordia/offices/sgs/docs/handbooks/thesispreparationguide.pdf. Please refer to the last few pages for the thesis example.
 
+## Feature Screenshots
+1. Title Page ![Title Page](/figures/TitlePage.png)
+2. Signature Page ![Signature Page](/figures/SignaturePage.png)
+3. Abstract Page ![Abstract Page](/figures/PhDAbstract.png)
+4. Degree Configureation ![Degree Configureation](/figures/DegreeInformation.png)
+
 ## Requirements
- To start with
+ In order to run it properly, you must have
   * MikTex 2.9
   * A LaTeX editor, e.g., TeXstudio, Texmaker, TeXnic, or TeXworks.
   * The template `ConcordiaThesis.tex` and the style file `ConcordiaU.sty`.
