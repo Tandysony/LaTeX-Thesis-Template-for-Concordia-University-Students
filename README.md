@@ -1,10 +1,10 @@
-# A LaTeX thesis template and style for ENCS graduate student from Concordia University
+# A LaTeX Thesis Template and Style for ENCS Graduate Students from Concordia University
 ----------------------------------------------
 * Version: v2.0
 * Last updated:	Oct. 20, 2015
 * Author: Suo Tan
 * Design Lab, ENCS
-* Cocordia University
+* Concordia University
 * Montreal, QC, CA
 
 ## Introduction
@@ -29,7 +29,7 @@
 ## FAQ
  * Q: Why I am getting question marks [?] for citations and references are not shown anymore?  
 
- A: Please (1). Make sure your bibiography file (.bib) is in the folder and each item is configured correctly (pay attention to `,` and `}`. (2). Run in this sequence: `pdfLaTex` -->  `bibTex` --> `pdfLaTex`.  It may help.
+ A: Please (1). Make sure your bibliography file (.bib) is in the folder and each item is configured correctly (pay attention to `,` and `}`. (2). Run in this sequence: `pdfLaTex` -->  `bibTex` --> `pdfLaTex`.  It may help.
 
 ## Contact
 * Suo Tan - [tandysony@gmail.com](tandysony@gmail.com)
