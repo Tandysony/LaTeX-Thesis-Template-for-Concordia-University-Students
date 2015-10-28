@@ -44,6 +44,36 @@
     \end{table}
     
     
+\section{Itemized examples using list structures in \LaTeX{}}
+\label{SubSec.:bullet}
+
+Item list using ``\texttt{itemize}" structure are given below:
+
+% itemize style 
+\begin{itemize} 
+    
+    \item  Use bold/italic for emphasis, but keep its use to a minimum. Avoid using underlining in your paper.
+    \item  Use a consistent spelling style throughout the paper (US or UK).
+    \begin{itemize}  % level 2 items
+        \item  Use double quotes.
+        \item  Use \%, not percent.
+        \item  Do not use ampersands (\&) except as part of the official name of an organization or company.
+    \end{itemize}
+    \item  Keep hyphenation to a minimum. Do not hyphenate `coordinate' or `non' words, such as `nonlinear'.
+    
+\end{itemize}
+
+The following are using ``\texttt{enumerate}" structure:
+
+% enumerated style 
+\begin{enumerate} 
+    
+    \item  For complete or near complete sentences, begin with a capital letter and end with a full stop.
+    \item  For short phrases, start with lower case letters and end with semicolons.
+    
+\end{enumerate}
+
+    
 \section{Algorithm}
     
     The pseudo code shown in Algorithm \ref{alg:myAlgo} describes the proposed algorithm.
@@ -82,8 +112,12 @@
         \end{quote}
         \begin{flushright} CEO, Full Name (Company A) \end{flushright}
         
+
 \section{Citations}
         \label{subSec:Citations}
         
         It is suggested that you choose ``\textbf{$\backslash$citet}" and/or ``\textbf{$\backslash$citep}" to cite references. The ``\textbf{$\backslash$citet\{key\}}" gives you a format of  ``\textbf{Name (1990)}", whileas ``\textbf{$\backslash$citep\{key\}}" delivers a format of ``\textbf{(Name, 1990)}". For example, \citet{Wang&Zeng:2009} extended their research from \citep{Zeng:2008}.
+        
+
+
         

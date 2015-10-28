@@ -47,7 +47,8 @@
 \usepackage{algorithmicx, algpseudocode}  %  write algorithms in pseudo code in a uniform style
 \usepackage{algorithm}                             % algorithm and pseudocode environment
 \usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}    % blue color for all links, urls and citations 
-%\renewcommand{\labelitemi}{$\circ$}  	   % (o) for itemized item
+\usepackage{enumitem}
+\renewcommand{\labelenumi}{(\arabic{enumi})}		%  "(1)." style for enuminated items 
 %\usepackage[titletoc,title]{appendix}   	   % appedix styles
 %\usepackage{epsfig}					           % eps figures if needed
 %\usepackage{epstopdf}                           % eps to pdf print
