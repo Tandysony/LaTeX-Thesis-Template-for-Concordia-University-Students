@@ -1,9 +1,9 @@
 
-%%%%%%%%%%%%%%%%%%%%%      MyThesis.tex  -- MikTex 2.9     %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%      ConcordiaThesis.tex  -- MikTex 2.9     %%%%%%%%%%%%%%%%%
 %%                                                                                                                  				
 %%      A LaTex thesis template for ENCS graduate student from Concordia University (v2.0)                                  
 %%                                                                                                                      				  
-%%                  Last updated on Oct. 21, 2015                                                                         
+%%                  Last updated on Nov. 2, 2015                                                                         
 %%         by     Suo Tan (tandysony@gmail.com)                                                                 
 %%                   Design Lab, ENCS                                                                          				   
 %%                   Concordia University                                                                       				    
@@ -19,10 +19,10 @@
 %%  The template has been tested with TeXstudio, TeXworks, CTex, and TeXnic                      
 %%  under MikTex 2.9, with UTF-8 encoding.                                                                   
 %%                                                                                                                                               
-%%  The ConcordiaU.sty file MUST be included in the folder.                                                     
+%%  The ConcordiaU.sty file MUST be included in your thesis folder.                                                     
 %%                                                                                                                                                 
 %%  If you are running it at your first time, make sure that you have internet connection. 			      
-%%  You might need package downloading to ensure it works.											                         
+%%  You might need to download package(s) to ensure it works.											                         
 %%  In case that you changed your reference database (*.bib file) and have any problem  	
 %%  in generating references/citations correctly, please run in this sequence: "pdfLaTex  		
 %%  -->  bibTex --> pdfLaTex".  This may help.                                                                                                    
@@ -41,7 +41,7 @@
 \usepackage{amsmath}                            % equations/formulas
 \usepackage[dvips]{graphicx}                    % to include images. For those who use .eps images. The option [dvips] must be there.
 \graphicspath{{figures/}}                           % all figures are put in the folder named "figures"
-%\usepackage{subfigure}                            % enable subfigures if needed
+%\usepackage{subfigure}                            % enable subfigures
 \usepackage{multirow} 					 		  % multirow in a table cellcc
 \usepackage{indentfirst}                           % add indent to the first line of each paragraph
 \usepackage{algorithmicx, algpseudocode}  %  write algorithms in pseudo code in a uniform style
@@ -49,10 +49,12 @@
 \usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}    % blue color for all links, urls and citations 
 \usepackage{enumitem}
 \renewcommand{\labelenumi}{(\arabic{enumi})}		%  "(1)." style for enuminated items 
+\renewcommand{\labelitemii}{$\circ$}  	% (o) for the second level bullet items
+\usepackage[titletoc,title]{appendix}
 %\usepackage[titletoc,title]{appendix}   	   % appedix styles
-%\usepackage{epsfig}					           % eps figures if needed
+%\usepackage{epsfig}					           % eps figures 
 %\usepackage{epstopdf}                           % eps to pdf print
-%\usepackage{multirow} 					          % multirow in a table cell, if needed
+%\usepackage{multirow} 					          % multirow in a table cell
 
 %###################  END: Environment Setup  #######################
 
@@ -102,10 +104,19 @@
 
 
 %%%%%%%%%% Appendices %%%%%%%%%%%%%%%%
-% You much enable ``\usepackage[titletoc,title]{appendix}'' to use this part.
-%\begin{appendices}
-%	\include{Appendix_A}
-%\end{appendices}
+% ---- Appendix settings. Please Do NOT change them. -----
+\appendix
+\setcounter{table}{0}		% reset the table counter
+\setcounter{figure}{0}		% reset the figure counter
+\renewcommand{\thefigure}{\Alph{chapter}.\arabic{figure}} 	% numbering the a figure in Appendix as Figure A.2, Figure B.1, etc.
+\renewcommand{\thetable}{\Alph{chapter}.\arabic{table}}		% numbering the a table in Appendix as Table A.2, Table B.1, etc.
+
+%%%%%%%%%% Body of Appendix %%%%%%%%%%%%%%%%
+\include{Appendix_A}
+
+
+
+
 
 %%%%%%%%%% References %%%%%%%%%%%%%%%%%
 \addcontentsline{toc}{chapter}{Bibliography}  %  Add Bibliography to TOC
