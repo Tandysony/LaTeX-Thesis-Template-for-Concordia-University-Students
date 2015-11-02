@@ -41,6 +41,15 @@
 \brokenpenalty=10000
 
 \usepackage{times}
+%\usepackage{tocloft}
+
+%\newlength{\mylen}
+
+%\renewcommand{\cftfigpresnum}{\figurename\enspace}
+%\renewcommand{\cftfigaftersnum}{:}
+%\settowidth{\mylen}{\cftfigpresnum\cftfigaftersnum}
+%\addtolength{\cftfignumwidth}{\mylen}
+
 % for continous numbering of figures & tables across chapters use the following:
 %\def\cl@chapter{\@elt{section}\@elt{footnote}}
 %\def\thefigure{\@arabic\c@figure}
@@ -51,6 +60,8 @@
 \def\cl@chapter{\@elt{section}\@elt{footnote}\@elt{figure}\@elt{table}}
 
 \def\theequation{\arabic{equation}}
+
+
 
 \def\chairOfCommittee#1{\gdef\@chairOfCommittee{#1}}
 \def\examinerFirstOfCommittee#1{\gdef\@examinerFirstOfCommittee{#1}}
@@ -281,6 +292,8 @@ of Doctor of Philosophy.
                 {\addvspace{10pt}
                 \let\saveaddvspace=\addvspace
                 \def\addvspace##1{}
+                \let\oldnumberline\numberline%
+                \renewcommand{\numberline}{\figurename~\oldnumberline}%
                 \listoffigures
                 \let\addvspace=\saveaddvspace}
                 \newpage
@@ -290,6 +303,8 @@ of Doctor of Philosophy.
                 {\addvspace{10pt}
                 \let\saveaddvspace=\addvspace
                 \def\addvspace##1{}
+                \let\oldnumberline\numberline%
+                \renewcommand{\numberline}{\tablename~\oldnumberline}
                 \listoftables
                 \let\addvspace=\saveaddvspace}
                 \newpage
