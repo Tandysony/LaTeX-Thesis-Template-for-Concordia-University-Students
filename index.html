@@ -4,38 +4,48 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>LaTeX-Thesis-Template-for-Concordia-University-Students by Tandysony</title>
-
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
   <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/Tandysony/LaTeX-Thesis-Template-for-Concordia-University-Students">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/Tandysony/LaTeX-Thesis-Template-for-Concordia-University-Students/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/Tandysony/LaTeX-Thesis-Template-for-Concordia-University-Students/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
     <div class="wrapper">
-      <header>
-        <h1>LaTeX-Thesis-Template-for-Concordia-University-Students</h1>
-        <p>A thesis template and style in LaTeX for ENCS graduate students from Concordia University</p>
 
-        <p class="view"><a href="https://github.com/Tandysony/LaTeX-Thesis-Template-for-Concordia-University-Students">View the Project on GitHub <small>Tandysony/LaTeX-Thesis-Template-for-Concordia-University-Students</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/Tandysony/LaTeX-Thesis-Template-for-Concordia-University-Students/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/Tandysony/LaTeX-Thesis-Template-for-Concordia-University-Students/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/Tandysony/LaTeX-Thesis-Template-for-Concordia-University-Students">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
       <section>
+        <div id="title">
+          <h1>LaTeX-Thesis-Template-for-Concordia-University-Students</h1>
+          <p>A thesis template and style in LaTeX for ENCS graduate students from Concordia University</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/Tandysony">Tandysony</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
         <h1>
 <a id="a-latex-thesis-template-and-style-for-encs-students-from-concordia-university" class="anchor" href="#a-latex-thesis-template-and-style-for-encs-students-from-concordia-university" aria-hidden="true"><span class="octicon octicon-link"></span></a>A LaTeX Thesis Template and Style for ENCS Students from Concordia University</h1>
 
 <hr>
 
 <ul>
-<li>Version: v2.0</li>
-<li>Last updated: Oct. 20, 2015</li>
+<li>Version: v2.1</li>
+<li>Last updated: Nov. 2, 2015</li>
 <li>Author: Suo Tan</li>
 <li>Design Lab, ENCS</li>
 <li>Concordia University</li>
@@ -68,7 +78,7 @@
 <h2>
 <a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
-<p>In order to run it properly, you must have</p>
+<p>In order to run it properly, you must have the following avaiable</p>
 
 <ul>
 <li>MikTex 2.9</li>
@@ -90,7 +100,7 @@
 
 <ul>
 <li>
-<p>Q: Why I am getting question marks [?] for citations and references are not shown anymore?  </p>
+<p>Q: Why I am getting question marks <code>?</code> for citations and references are not shown anymore?  </p>
 
 <p>A: Please (1). Make sure your bibliography file (.bib) is in the folder and each item is configured correctly (pay attention to <code>,</code> and <code>}</code>. (2). Run in this sequence: <code>pdfLaTex</code> --&gt;  <code>bibTex</code> --&gt; <code>pdfLaTex</code>.  It may help.</p>
 </li>
@@ -104,12 +114,9 @@
 </li>
 </ul>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/Tandysony">Tandysony</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
   </body>
 </html>
