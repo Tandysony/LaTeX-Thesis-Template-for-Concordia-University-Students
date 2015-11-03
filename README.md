@@ -1,7 +1,7 @@
 # A LaTeX Thesis Template and Style for ENCS Graduate Students from Concordia University
 ----------------------------------------------
-* Version: v2.0
-* Last updated:	Oct. 20, 2015
+* Version: v2.1
+* Last updated:	Nov. 2, 2015
 * Author: Suo Tan
 * Design Lab, ENCS
 * Concordia University
@@ -17,7 +17,7 @@
 4. Degree Configureation ![Degree Configureation](/figures/DegreeInformation.png)
 
 ## Requirements
- In order to run it properly, you must have
+ In order to run it properly, you must have the following available
   * MikTex 2.9
   * A LaTeX editor, e.g., TeXstudio, Texmaker, TeXnic, or TeXworks.
   * The template `ConcordiaThesis.tex` and the style file `ConcordiaU.sty`.
@@ -27,7 +27,7 @@
   * The template has been tested with TeXstudio, TeXworks, CTex, and TeXnic under MikTex 2.9, with UTF-8 encoding. If you notice anything in the Thesis Specifications that does not match the templates, please let me know. I will make my effort to keep it up to date.           
 
 ## FAQ
- * Q: Why I am getting question marks [?] for citations and references are not shown anymore?  
+ * Q: Why I am getting question marks `?` for the citations, and references are not shown anymore?  
 
  A: Please (1). Make sure your bibliography file (.bib) is in the folder and each item is configured correctly (pay attention to `,` and `}`. (2). Run in this sequence: `pdfLaTex` -->  `bibTex` --> `pdfLaTex`.  It may help.
 
